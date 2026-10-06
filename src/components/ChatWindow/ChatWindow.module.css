@@ -1,0 +1,48 @@
+.window,
+.placeholder {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  transition: transform 0.5s
+}
+
+.header{
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  background: #212121;
+  border-radius: 16px;
+}
+
+.nameWrapper{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name{
+  color: white;
+}
+
+.sub{
+  font-size: 14px;
+}
+
+@media (max-width: 700px){
+  .window,
+  .placeholder{
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    transform: translateX(100%);
+    background: #16171D;
+  }
+
+  [data-chat-open='true'] .window {
+    transform: translateX(0);
+  }
+}

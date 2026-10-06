@@ -1,0 +1,18 @@
+.wrapper{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input{
+    width: 100%;
+    margin-right: 8px;
+    opacity: 0.8;
+    font-size: 16px;
+    resize: none;
+    background: #122846;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    outline: none;
+}

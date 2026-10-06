@@ -11,8 +11,9 @@ const STATE_TEXT: Record<string, string> = {
 
 export function LoginForm() {
   const login = useChatStore(s => s.login)
-  const [apiUrl, setApiUrl] = useState('https://api.green-api.com')
-  const [idInstance, setIdInstance] = useState('')
+  const lastLogin = useChatStore(s => s.lastLogin)
+  const [apiUrl, setApiUrl] = useState(lastLogin?.apiUrl ?? '')
+  const [idInstance, setIdInstance] = useState(lastLogin?.idInstance ?? '')
   const [apiTokenInstance, setApiTokenInstance] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
@@ -51,31 +52,39 @@ export function LoginForm() {
         <p className={styles.hint}>
           Данные инстанса из личного кабинета console.green-api.com
         </p>
-        <label className={styles.field}>
+        <div className={styles.inputWrapper}>
+          <label className={styles.field}>
           apiUrl
-          <input value={apiUrl} onChange={e => setApiUrl(e.target.value)} />
-        </label>
-        <label className={styles.field}>
-          idInstance
           <input
-            value={idInstance}
-            onChange={e => setIdInstance(e.target.value)}
-            inputMode="numeric"
-            autoFocus
+            type="url"
+            name="apiUrl"
+            value={apiUrl}
+            onChange={e => setApiUrl(e.target.value)}
+            placeholder="https://1234.api.green-api.com"
           />
-        </label>
-        <label className={styles.field}>
-          apiTokenInstance
-          <input
-            type="password"
-            value={apiTokenInstance}
-            onChange={e => setApiTokenInstance(e.target.value)}
-          />
-        </label>
-        {error && <div className={styles.error}>{error}</div>}
-        <button className={styles.button} disabled={disabled}>
-          {loading ? 'Проверяем…' : 'Войти'}
-        </button>
+          </label>
+          <label className={styles.field}>
+            idInstance
+            <input
+              value={idInstance}
+              onChange={e => setIdInstance(e.target.value)}
+              inputMode="numeric"
+              autoFocus
+            />
+          </label>
+          <label className={styles.field}>
+            apiTokenInstance
+            <input
+              type="password"
+              value={apiTokenInstance}
+              onChange={e => setApiTokenInstance(e.target.value)}
+            />
+          </label>
+          {error && <div className={styles.error}>{error}</div>}
+          <button className={styles.button} disabled={disabled}>
+            {loading ? 'Проверяем…' : 'Войти'}
+          </button>
+        </div>
       </form>
     </div>
   )

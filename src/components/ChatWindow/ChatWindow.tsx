@@ -49,7 +49,7 @@ export function ChatWindow() {
         <button className={styles.back} onClick={() => setActiveChat(null)} aria-label="Назад">
           ←
         </button>
-        <div>
+        <div className={styles.nameWrapper}>
           <div className={styles.name}>{chat.name}</div>
           {chat.phone && <div className={styles.sub}>+{chat.phone}</div>}
         </div>

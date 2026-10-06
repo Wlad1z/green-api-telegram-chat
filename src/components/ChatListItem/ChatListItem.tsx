@@ -15,7 +15,7 @@ export function ChatListItem({ chat }: { chat: Chat }) {
       onClick={() => setActiveChat(chat.chatId)}
     >
       <div className={styles.avatar}>{chat.name.replace(/^[@+]/, '').charAt(0).toUpperCase()}</div>
-      <div className={styles.body}>
+      <div className={`${styles.body} ${chat.unread ? styles.unread : ''}`}>
         <div className={styles.top}>
           <span className={styles.name}>{chat.name}</span>
           {last && <span className={styles.time}>{formatTime(last.timestamp)}</span>}

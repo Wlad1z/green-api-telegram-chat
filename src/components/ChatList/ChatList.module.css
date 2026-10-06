@@ -1,0 +1,29 @@
+.list {
+  flex: 1;                 
+  min-height: 0;
+  margin: 16px 0 0;
+  padding: 4px;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.list::-webkit-scrollbar-button {
+  display: none;
+}

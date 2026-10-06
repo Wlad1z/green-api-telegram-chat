@@ -15,7 +15,7 @@ export function MessageBubble({ message }: { message: Message }) {
       <div className={styles.bubble}>
         <span className={styles.text}>{message.text}</span>
         <span className={styles.meta}>
-          {formatTime(message.timestamp)}
+          <span className={styles.time}>{formatTime(message.timestamp)}</span>
           {isOut && message.status && (
             <span
               className={`${styles.status} ${message.status === 'read' ? styles.read : ''}`}
