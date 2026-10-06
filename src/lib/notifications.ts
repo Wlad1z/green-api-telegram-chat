@@ -23,8 +23,6 @@ const STATUS_MAP = {
 } as const
 
 export function handleNotification(body: WebhookBody): void {
-  if (import.meta.env.DEV) console.log('[notification]', body.typeWebhook, body)
-
   const store = useChatStore.getState()
 
   switch (body.typeWebhook) {

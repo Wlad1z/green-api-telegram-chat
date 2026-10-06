@@ -4,6 +4,8 @@ import type { Chat, Credentials, Message } from '../types'
 
 interface ChatState {
   credentials: Credentials | null
+  // остаётся после выхода, чтобы заново не вводить apiUrl и idInstance (токен не храним)
+  lastLogin: Pick<Credentials, 'apiUrl' | 'idInstance'> | null
   chats: Chat[]
   messages: Record<string, Message[]> // chatId -> сообщения
   activeChatId: string | null
@@ -19,11 +21,16 @@ export const useChatStore = create<ChatState>()(
   persist(
     (set, get) => ({
       credentials: null,
+      lastLogin: null,
       chats: [],
       messages: {},
       activeChatId: null,
 
-      login: credentials => set({ credentials }),
+      login: credentials =>
+        set({
+          credentials,
+          lastLogin: { apiUrl: credentials.apiUrl, idInstance: credentials.idInstance },
+        }),
 
       logout: () => set({ credentials: null, chats: [], messages: {}, activeChatId: null }),
       addChat: chat => {

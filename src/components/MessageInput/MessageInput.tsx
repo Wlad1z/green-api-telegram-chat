@@ -23,10 +23,10 @@ export function MessageInput({ onSend }: { onSend: (text: string) => void }) {
   return (
     <div className={styles.wrapper}>
       <textarea
-        className={styles.textarea}
-        rows={1}
+        className={styles.input}
         placeholder="Сообщение"
         value={text}
+        rows={1}
         maxLength={MAX_LENGTH}
         onChange={e => setText(e.target.value)}
         onKeyDown={handleKeyDown}
