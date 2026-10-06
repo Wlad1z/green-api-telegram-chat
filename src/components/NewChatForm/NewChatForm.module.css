@@ -1,13 +1,13 @@
-.form{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 16px;
-    margin-top: 16px;
-    flex-wrap: wrap;
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
 }
 
-.input{
-    width: 200px;
-    max-width: 100%;
+.input {
+  width: 200px;
+  max-width: 100%;
 }

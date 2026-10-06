@@ -1,4 +1,4 @@
-import { useState, type SubmitEvent } from 'react';
+import { useState, type SubmitEvent } from 'react'
 import { getStateInstance, humanizeError } from '../../api/greenApi'
 import { useChatStore } from '../../store/chatStore'
 import styles from './LoginForm.module.css'
@@ -6,7 +6,7 @@ import styles from './LoginForm.module.css'
 const STATE_TEXT: Record<string, string> = {
   notAuthorized: 'Инстанс не авторизован. Отсканируйте QR-код в личном кабинете',
   blocked: 'Инстанс заблокирован',
-  starting: 'Инстанс запускается, попробуйте через минуту'
+  starting: 'Инстанс запускается, попробуйте через минуту',
 }
 
 export function LoginForm() {
@@ -26,7 +26,7 @@ export function LoginForm() {
     const creds = {
       apiUrl: apiUrl.trim(),
       idInstance: idInstance.trim(),
-      apiTokenInstance: apiTokenInstance.trim()
+      apiTokenInstance: apiTokenInstance.trim(),
     }
 
     try {
@@ -44,24 +44,22 @@ export function LoginForm() {
   }
 
   const disabled = loading || !idInstance || !apiTokenInstance
-  
+
   return (
     <div className={styles.page}>
       <form className={styles.card} onSubmit={handleSubmit}>
         <h1 className={styles.title}>Вход в GREEN-API</h1>
-        <p className={styles.hint}>
-          Данные инстанса из личного кабинета console.green-api.com
-        </p>
+        <p className={styles.hint}>Данные инстанса из личного кабинета console.green-api.com</p>
         <div className={styles.inputWrapper}>
           <label className={styles.field}>
-          apiUrl
-          <input
-            type="url"
-            name="apiUrl"
-            value={apiUrl}
-            onChange={e => setApiUrl(e.target.value)}
-            placeholder="https://1234.api.green-api.com"
-          />
+            apiUrl
+            <input
+              type="url"
+              name="apiUrl"
+              value={apiUrl}
+              onChange={e => setApiUrl(e.target.value)}
+              placeholder="https://1234.api.green-api.com"
+            />
           </label>
           <label className={styles.field}>
             idInstance

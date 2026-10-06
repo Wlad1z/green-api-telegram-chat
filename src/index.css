@@ -107,7 +107,8 @@ code {
   background: var(--code-bg);
 }
 
-button, input {
+button,
+input {
   background: #122846;
   border: none;
   padding: 4px 8px;
@@ -115,6 +116,6 @@ button, input {
   outline: none;
 }
 
-button{
+button {
   cursor: pointer;
 }

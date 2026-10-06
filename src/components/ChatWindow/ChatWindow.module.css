@@ -7,10 +7,10 @@
   min-height: 0;
   box-sizing: border-box;
   padding: 0 10px;
-  transition: transform 0.5s
+  transition: transform 0.5s;
 }
 
-.header{
+.header {
   display: flex;
   gap: 8px;
   padding: 16px;
@@ -18,28 +18,28 @@
   border-radius: 16px;
 }
 
-.nameWrapper{
+.nameWrapper {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.name{
+.name {
   color: white;
 }
 
-.sub{
+.sub {
   font-size: 14px;
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .window,
-  .placeholder{
+  .placeholder {
     width: 100%;
     position: absolute;
     inset: 0;
     transform: translateX(100%);
-    background: #16171D;
+    background: #16171d;
   }
 
   [data-chat-open='true'] .window {

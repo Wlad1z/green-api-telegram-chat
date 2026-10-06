@@ -1,16 +1,16 @@
-.layout{
-    flex: 1;
-    min-height: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
+.layout {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-@media (max-width: 700px){
-    .layout{
-        position: relative;
-        overflow: hidden
-    }
+@media (max-width: 700px) {
+  .layout {
+    position: relative;
+    overflow: hidden;
+  }
 }

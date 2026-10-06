@@ -5,7 +5,6 @@
   overflow-y: auto;
   overflow-x: clip;
   margin-top: 16px;
-  
 }
 
 .list::-webkit-scrollbar {
@@ -28,4 +27,3 @@
 .list::-webkit-scrollbar-button {
   display: none;
 }
-

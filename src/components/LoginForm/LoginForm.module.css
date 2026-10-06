@@ -1,23 +1,24 @@
-.inputWrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 8px;
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.field{
-    display: flex;
-    justify-content: space-between;
+.field {
+  display: flex;
+  justify-content: space-between;
 }
 
-.card input, .button {
-    width: 60%;
-    background: #122846;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
+.card input,
+.button {
+  width: 60%;
+  background: #122846;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
-.button{
-    margin: 0 auto;
+.button {
+  margin: 0 auto;
 }

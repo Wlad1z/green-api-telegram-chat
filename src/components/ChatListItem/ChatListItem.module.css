@@ -1,18 +1,18 @@
-.item{
+.item {
   display: flex;
   padding: 4px 8px;
-  margin: 4px 0 ;
+  margin: 4px 0;
   border-radius: 8px;
   position: relative;
   cursor: pointer;
   transition: 300ms;
 }
 
-.item:hover{
+.item:hover {
   background: #2b2b2b;
 }
 
-.avatar{
+.avatar {
   height: 44px;
   width: 44px;
   line-height: 40px;
@@ -22,16 +22,17 @@
   text-align: center;
 }
 
-.unread *{
+.unread * {
   color: white;
 }
 
-.top, .bottom {
+.top,
+.bottom {
   height: 18px;
   transition: 300ms;
 }
 
-.body{
+.body {
   height: 44px;
   width: calc(100% - 60px);
   display: flex;
@@ -43,15 +44,17 @@
   text-align: left;
 }
 
-.name, .preview, .time{
+.name,
+.preview,
+.time {
   font: 16px / 90% var(--sans);
 }
 
-.name{
+.name {
   color: white;
 }
 
-.time{
+.time {
   position: absolute;
   right: 8px;
   top: 4px;
@@ -59,7 +62,8 @@
   opacity: 0.8;
 }
 
-.name,.preview {
+.name,
+.preview {
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -67,7 +71,7 @@
   height: 16px;
 }
 
-.badge{
+.badge {
   display: block;
   height: 24px;
   width: 24px;
@@ -82,6 +86,6 @@
   text-align: center;
 }
 
-.active{
+.active {
   background: #2360b679;
 }
